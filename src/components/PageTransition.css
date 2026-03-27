@@ -1,0 +1,26 @@
+.page-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 9999;
+}
+
+.page-transition-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.4);
+  transform: scale(0);
+  animation: page-ripple-expand 800ms forwards;
+  pointer-events: none;
+}
+
+@keyframes page-ripple-expand {
+  to {
+    transform: scale(50);
+    opacity: 0;
+  }
+}
